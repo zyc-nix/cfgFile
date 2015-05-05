@@ -1,0 +1,36 @@
+# for shell
+export TERM='screen-256color'
+#export TERM=xterm-256color for mac
+export XTERM=256color
+export EDITOR=vim
+
+# for go
+export GOPATH='/Users/qe/gocode'
+
+
+export http_proxy='http://proxy.vmware.com:3128'
+export P4CONFIG=.p4config
+
+# for search
+alias gr='grep -i -R'
+alias gi='grep -i '
+alias ag='ack-grep'
+alias ai='ack-grep -i'
+
+# for install
+alias sui='sudo apt-get install '
+alias suu='sudo apt-get update'
+alias sug='sudo apt-get upgrade'
+alias emc='emacs -nw'
+alias emo='emacs -nw -q'
+alias emg='emacs &'
+
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+
+# alias for pip install
+alias pxi='sudo pip --proxy proxy.vmware.com:3128 install'
+alias pxu='sudo pip --proxy proxy.vmware.com:3128 update'
+
+alias dstat='dstat -cdmnpsy'
+

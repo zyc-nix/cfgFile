@@ -1,0 +1,16 @@
+#!/bin/bash
+
+tmux new-session -d -s esx
+
+tmux new-window -t esx:1 -n 'ati' 'ssh qe@10.112.117.7'
+tmux new-window -t esx:2 -n 'rhel63' 'ssh qe@10.117.43.145'
+tmux new-window -t esx:3 -n 'fedora' 'ssh qe@10.117.41.91'
+tmux new-window -t esx:4 -n 'x32' 'ssh root@10.117.44.169'
+tmux new-window -t esx:5 -n 'x64' 'ssh qe@10.117.44.170'
+tmux new-window -t esx:6 -n 'suse' 'ssh qe@10.117.41.222'
+tmux new-window -t esx:7 -n 'sled11' 'ssh root@10.117.40.122'
+tmux new-window -t esx:8 -n 'sles11' 'ssh qe@10.117.41.71'
+
+tmux select-window -t esx:1
+tmux -2 attach-session -t esx
+
