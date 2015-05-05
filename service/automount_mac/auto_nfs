@@ -1,0 +1,4 @@
+toolchain           -fstype=nfs,nolockd,noresvport,rsize=8192,wsize=8192,hard,bg,intr,tcp nfs://build-toolchain.eng.vmware.com:/toolchain
+apps                -fstype=nfs,nolockd,noresvport,rsize=8192,wsize=8192,hard,bg,intr,tcp nfs://build-toolchain.eng.vmware.com:/apps
+trees               -fstype=nfs,nolockd,noresvport,rsize=8192,wsize=8192,hard,bg,intr,tcp nfs://build-toolchain.eng.vmware.com:/trees
+
