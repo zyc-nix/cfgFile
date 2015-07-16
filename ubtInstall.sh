@@ -26,7 +26,7 @@ installEmacs () {
 installJava () {
     sudo apt-add-repository -y ppa:webupd8team/java
     sudo apt-get update -y
-    sudo apt-get install -y oracle-java7-installer 
+    sudo apt-get install -y oracle-java8-installer 
 }
 
 installLein () {
@@ -51,9 +51,20 @@ installNvidia-Driver () {
     sudo apt-add-repository -y ppa:ubuntu-x-swat/x-updates
     sudo apt-get install -y nvidia-current
 }
+
+configDocker () {
+    wget -qO- https://get.docker.com/ | sh
+    sudo groupadd docker
+    sudo chown root:docker /var/run/docker.sock
+    username=$(whoami)
+    sudo usermod -a -G docker $username
+    sudo gpasswd -a $username docker
+}
+
 #firstUpdate
 #installEmacs
 #installJava
 #installLein
 #installGo
-installR
+#installR
+configDocker
